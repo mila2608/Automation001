@@ -23,3 +23,11 @@ task chromeTest(type:Test){
         suites "testng.xml"
     }
 }
+
+
+task FirefoxTest(type:Test){
+    systemProperty "driver", "firefox"
+    useTestNG(){
+        suites "testng.xml"
+    }
+}
