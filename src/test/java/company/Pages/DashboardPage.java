@@ -1,7 +1,9 @@
 package company.Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DashboardPage extends BasePage {
     @FindBy(xpath = "//span[@class='sn_menu_title']")
@@ -21,6 +23,9 @@ public class DashboardPage extends BasePage {
 
 
     public String getUserEmail() {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+       // wait.until(ExpectedConditions.visibilityOf(userEmail);
+        wait.until(s->s.findElement(By.xpath("//span[@class='sn_menu_title']")).isDisplayed());
         return userEmail.getText();
     }
 
