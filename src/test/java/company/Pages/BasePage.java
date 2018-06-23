@@ -1,11 +1,12 @@
 package company.Pages;
 
-import company.Drivers.DriverFactory;
-import org.openqa.selenium.WebDriver;
+import company.Drivers.MyDriver;
+import org.apache.log4j.LogManager;
 import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
-    static protected WebDriver driver = DriverFactory.getDriver();
+    protected org.apache.log4j.Logger log = LogManager.getLogger(this.getClass());
+    static protected MyDriver driver = MyDriver.getInstance();
 
    /* static {
        *//*  System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");

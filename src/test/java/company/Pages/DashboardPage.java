@@ -20,7 +20,9 @@ public class DashboardPage extends BasePage {
 
    /* @FindBy(xpath = "")
     private WebElement logOut;*/
-
+   public void scrollDown(){
+       driver.scrollDown();
+   }
 
     public String getUserEmail() {
         WebDriverWait wait = new WebDriverWait(driver, 10);

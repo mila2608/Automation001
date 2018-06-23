@@ -19,9 +19,11 @@ public class LoginPage extends BasePage {
 //	}
 
 	public void login(String name, String pass) {
+
 		login.sendKeys(name);
 		password.sendKeys(pass);
 		btnSubmit.click();
 	}
+
 
 }
